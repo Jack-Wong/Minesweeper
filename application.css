@@ -1,0 +1,19 @@
+.row {
+  height: 45px;
+  width: 460px;
+  margin: 0 auto;
+}
+
+.tile {
+  background-color: #00ffff;
+  border-style: outset;
+  display: inline-block;
+  vertical-align: top;
+  height: 40px;
+  width: 40px
+}
+
+.explored {
+  border-style: inset;
+  background-color: #ffff00;
+}
