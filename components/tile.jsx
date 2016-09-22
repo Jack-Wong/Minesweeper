@@ -7,7 +7,7 @@ class Tile extends React.Component {
 
   handleClick(event) {
     return (event) => {
-      let flagged = event.altkey;
+      let flagged = event.altKey;
       this.props.update(this.props.tile, flagged);
     }
   };
@@ -15,13 +15,13 @@ class Tile extends React.Component {
   render() {
     let display;
     if (this.props.tile.flagged) {
-      display = '&#9873;'
+      display = '\u2691';
     } else if (this.props.tile.explored && this.props.tile.bombed) {
-      display = '&#128163;'
+      display = '\u2622';
     } else if (this.props.tile.explored && this.props.tile.adjacentBombCount() > 0) {
-      display = <div>{this.props.tile.adjacentBombCount()}</div>
+      display = <div>{this.props.tile.adjacentBombCount()}</div>;
     } else {
-      display = " "
+      display = " ";
     }
 
     return (
@@ -35,6 +35,9 @@ class Tile extends React.Component {
     let classes = "tile";
     if (this.props.tile.explored) {
       classes += " explored";
+    }
+    if (this.props.tile.flagged) {
+      classes += " flagged"
     }
     return classes;
   }

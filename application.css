@@ -5,7 +5,7 @@
 }
 
 .tile {
-  background-color: #00ffff;
+  background-color: #c0c0c0;
   border-style: outset;
   display: inline-block;
   vertical-align: top;
@@ -15,5 +15,13 @@
 
 .explored {
   border-style: inset;
-  background-color: #ffff00;
+  background-color: #808080;
+}
+
+.flagged {
+  color: #b22222;
+}
+
+.tile:hover {
+  background-color: yellow;
 }
